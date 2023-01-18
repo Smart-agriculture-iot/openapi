@@ -56,17 +56,17 @@ def weather(db: Session = Depends(get_db), current_user: User = Depends(get_curr
 @router.get("/rainfall", response_description="", response_model="")
 def weather():
     
-    response = requests.get("http://10.10.109.85:5000/api/v1/rain")
+    response = requests.get("http://197.243.25.120:5000/api/v1/rain")
     return response.json()
 
 @router.get("/harvest/", response_description="", response_model="")
 def weather():
     
-    response = requests.get("http://10.10.109.85:5000/api/v1/harvest")
+    response = requests.get("http://197.243.25.120:5000/api/v1/harvest")
     return response.json()
 
 @router.get("/fulldataset", response_description="", response_model="")
 def weather():
     
-    response = requests.get("http://10.10.109.85:5000/api/v1/retrieve")
+    response = requests.get("http://197.243.25.120:5000/api/v1/retrieve")
     return response.json()
